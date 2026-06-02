@@ -1,8 +1,5 @@
 allowBuilds:
   sharp: true
-ignoredBuiltDependencies:
-  - sharp
-  - unrs-resolver
 minimumReleaseAgeExclude:
   - react-dom@19.2.7
   - react@19.2.7
