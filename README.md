@@ -1,6 +1,6 @@
-# Stereo Verify - Next.js Version
+# Stereo Verify
 
-A captcha demonstration based on Stereograms, converted to Next.js for Vercel deployment.
+A captcha demonstration based on Stereograms
 
 ## 🚀 Local Development
 
@@ -16,7 +16,7 @@ A captcha demonstration based on Stereograms, converted to Next.js for Vercel de
    cp .env.example .env
    ```
 
-   Edit the `.env` file and set the JWT secret key:
+   Use `openssl rand -base64 32` to generate JWT secret key, then set the `.env` file:
 
    ```
    JWT_SECRET=your-strong-secret-key-here
@@ -62,33 +62,30 @@ Verify the user's input captcha code.
 
 ## 🚀 Deploy to Vercel
 
-1. Push this `next` directory to a GitHub repository
+1. Go to [Vercel](https://vercel.com) and create a new project
 
-2. Go to [Vercel](https://vercel.com) and create a new project
+2. Import your GitHub repository
 
-3. Import your GitHub repository
-
-4. Configure environment variables:
+3. Configure environment variables:
    - `JWT_SECRET`: Your strong secret key (at least 32 characters)
 
-5. Deploy!
+4. Deploy!
 
 ## 📁 Project Structure
 
 ```
-next/
-├── app/
-│   ├── api/
-│   │   ├── generate/route.ts    # Generate captcha API
-│   │   └── verify/route.ts      # Verify captcha API
-│   ├── page.tsx                 # Main page
-│   └── layout.tsx               # Layout component
-├── public/
-│   ├── github.png               # GitHub logo
-│   └── msyh.ttf                 # Font file
-├── .env.example                 # Environment variables template
-├── vercel.json                  # Vercel configuration
-└── package.json
+app/
+├── api/
+│   ├── generate/route.ts    # Generate captcha API
+│   └── verify/route.ts      # Verify captcha API
+├── page.tsx                 # Main page
+└── layout.tsx               # Layout component
+public/
+├── github.png               # GitHub logo
+└── msyh.ttf                 # Font file
+.env.example                 # Environment variables template
+vercel.json                  # Vercel configuration
+package.json
 ```
 
 ## 🔧 Technical Stack
