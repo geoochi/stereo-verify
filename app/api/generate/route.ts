@@ -1,12 +1,7 @@
 import { NextResponse } from 'next/server'
 import { createCanvas, GlobalFonts } from '@napi-rs/canvas'
 import { join } from 'path'
-import { fileURLToPath } from 'url'
-import { dirname } from 'path'
 import * as jose from 'jose'
-
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
 
 // Register font
 try {
